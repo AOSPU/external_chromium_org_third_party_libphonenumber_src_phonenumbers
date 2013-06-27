@@ -25,17 +25,21 @@
 #include <string>
 #include <vector>
 
-#include "base/basictypes.h"
-#include "base/memory/scoped_ptr.h"
+#include "phonenumbers/base/basictypes.h"
+#include "phonenumbers/base/memory/scoped_ptr.h"
 #include "phonenumbers/callback.h"
 #include "phonenumbers/regexp_adapter.h"
 
 namespace i18n {
 namespace phonenumbers {
 
+template <class R, class A1, class A2, class A3, class A4>
+    class ResultCallback4;
+
 using std::string;
 using std::vector;
 
+class AlternateFormats;
 class NumberFormat;
 class PhoneNumber;
 class PhoneNumberMatch;
@@ -152,6 +156,10 @@ class PhoneNumberMatcher {
 
   // Helper class holding useful regular expressions.
   const PhoneNumberMatcherRegExps* reg_exps_;
+
+  // Helper class holding loaded data containing alternate ways phone numbers
+  // might be formatted for certain regions.
+  const AlternateFormats* alternate_formats_;
 
   // The phone number utility;
   const PhoneNumberUtil& phone_util_;
