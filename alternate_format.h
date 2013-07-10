@@ -1,11 +1,11 @@
-/**
- * Copyright 2010 Google Inc.
+/*
+ * Copyright (C) 2012 The Libphonenumber Authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,11 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#ifndef STRINGS_STRINGPIECE_H_
-#define STRINGS_STRINGPIECE_H_
 
-#include "phonenumbers/base/strings/string_piece.h"
+#ifndef I18N_PHONENUMBERS_ALTERNATE_FORMAT_H_
+#define I18N_PHONENUMBERS_ALTERNATE_FORMAT_H_
 
-using i18n::phonenumbers::StringPiece;
+namespace i18n {
+namespace phonenumbers {
 
-#endif  // STRINGS_STRINGPIECE_H_
+int alternate_format_size();
+const void* alternate_format_get();
+
+}  // namespace phonenumbers
+}  // namespace i18n
+
+#endif  // I18N_PHONENUMBERS_ALTERNATE_FORMAT_H_
